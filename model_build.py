@@ -37,8 +37,8 @@ print(rfe.ranking_)
 print(col_names)
 features = [X[i] for i in range(len(rfe.support_)) if rfe.support_[i]]
 # Features selected: [‘satisfaction_level’, ‘last_evaluation’, ‘time_spend_company’, ‘Work_accident’, ‘promotion_last_5years’, ‘department_RandD’, ‘department_hr’, ‘department_management’, ‘salary_high’, ‘salary_low’]
-print(X)
-print(features)
+# print(X)
+print('features', features)
 
 cols=features
 X=hr[cols]
@@ -48,6 +48,7 @@ y=hr['left']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 rf = RandomForestClassifier()
+print('TRAIN DS COL', X_train.columns.to_list())
 rf.fit(X_train, y_train)
 pickle.dump(rf, open('random_forest.p', 'wb'))
 
