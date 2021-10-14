@@ -1,5 +1,18 @@
 import 'antd/dist/antd.css';
-import { Form, Checkbox, Select, Input, Button, Slider, Card, Modal, Spin, PageHeader, Affix } from 'antd';
+import {
+  Form,
+  Checkbox,
+  Select,
+  Input,
+  Button,
+  Slider,
+  Card,
+  Modal,
+  Spin,
+  PageHeader,
+  Affix,
+  Alert
+} from 'antd';
 import React from 'react';
 import axios from "axios";
 import { apiUrl } from "./constants";
@@ -17,6 +30,8 @@ function App() {
   const [staying, setStaying] = React.useState(false);
   const [modalLoading, setModalLoading] = React.useState(false);
   const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const [timeCompanyAlert, setTimeCompanyAlert] = React.useState(false);
+  const [floatAlert, setFloatAlert] = React.useState(false);
 
   const defaultOptionsLeaving = {
     loop: false,
@@ -46,14 +61,26 @@ function App() {
       values.promotion_last_5years = false;
     }
     values.satisfaction_level /= 100;
-    console.log(values);
-    showModal();
-    setModalLoading(true);
-    axios.post(apiUrl, values).then(res => {
-      console.log(res.data);
-      setStaying(res.data.staying);
-      setModalLoading(false);
-    }).catch(err => console.log(err));
+    if (parseFloat(values.last_evaluation) > parseFloat(values.time_spend_company)) {
+      setTimeCompanyAlert(true);
+    } else if (
+      values.last_evaluation != parseFloat(values.last_evaluation)
+      ||
+      values.time_spend_company != parseFloat(values.time_spend_company)
+    ) {
+      setFloatAlert(true);
+    } else {
+      setTimeCompanyAlert(false);
+      setFloatAlert(false);
+      console.log(values);
+      showModal();
+      setModalLoading(true);
+      axios.post(apiUrl, values).then(res => {
+        console.log(res.data);
+        setStaying(res.data.staying);
+        setModalLoading(false);
+      }).catch(err => console.log(err));
+    }
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -107,6 +134,28 @@ function App() {
           }
         </Modal>
         <Card style={{ backgroundColor: "#fafafa" }}>
+          {
+            timeCompanyAlert ?
+              <Alert
+                message="Error"
+                description="The 'Time Since Last Evaluation' cannot be greater than the 'Time spent at the company'."
+                type="error"
+                showIcon
+              />
+              :
+              <div />
+          }
+          {
+            floatAlert ?
+              <Alert
+                message="Error"
+                description="Both the written fields should be floating point numbers."
+                type="error"
+                showIcon
+              />
+              :
+              <div />
+          }
           <Form
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
