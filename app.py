@@ -10,8 +10,6 @@ CORS(app)
 @app.route('/', methods=['POST'])
 def home():
     loaded_model = None
-    print('request.json')
-    print(request.json)
     with open('svm.p', 'rb') as file:
         loaded_model = pickle.load(file)
     build_dict = {
@@ -31,7 +29,6 @@ def home():
     build_dict[request.json.get('salary')][0] = 1
     test = pd.DataFrame.from_dict(build_dict)
     predictions = loaded_model.predict(test)
-    print(predictions)
     if predictions[0] == 0:
         return jsonify({'staying': True})
     return jsonify({'staying': False})
