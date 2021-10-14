@@ -26,8 +26,10 @@ def home():
         'salary_high': [0],
         'salary_low': [0],
     }
-    build_dict[f"department_{request.json.get('department')}"][0] = 1
-    build_dict[request.json.get('salary')][0] = 1
+    if request.json.get('department') == 'hr' or request.json.get('department') == 'RandD' or request.json.get('department') == 'management':
+        build_dict[f"department_{request.json.get('department')}"][0] = 1
+    if request.json.get('salary') != 'salary_medium':
+        build_dict[request.json.get('salary')][0] = 1
     test = pd.DataFrame.from_dict(build_dict)
     predictions = loaded_model.predict(test)
     print(predictions)
@@ -37,4 +39,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=8000)
+    app.run(debug=True, host='0.0.0.0', port=8000)
