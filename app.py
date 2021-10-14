@@ -12,7 +12,7 @@ def home():
     loaded_model = None
     print('request.json')
     print(request.json)
-    with open('random_forest.p', 'rb') as file:
+    with open('svm.p', 'rb') as file:
         loaded_model = pickle.load(file)
     build_dict = {
         'satisfaction_level': [request.json.get('satisfaction_level')],

@@ -3,7 +3,6 @@ import numpy as np
 from sklearn.feature_selection import RFE
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
-# from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import pickle
@@ -45,22 +44,21 @@ cols=features
 X=hr[cols]
 y=hr['left']
 
-# Use Random Forest
+# Use SVM
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
-# rf = RandomForestClassifier()
-rf = SVC()
+svc = SVC()
 print('TRAIN DS COL', X_train.columns.to_list())
-# rf.fit(X_train, y_train)
-rf.fit(X_train, y_train)
-pickle.dump(rf, open('random_forest.p', 'wb'))
+# svc.fit(X_train, y_train)
+svc.fit(X_train, y_train)
+pickle.dump(svc, open('svm.p', 'wb'))
 
-print('Random Forest Accuracy: {:.3f}'.format(accuracy_score(y_test, rf.predict(X_test))))
-print('Classification Report', classification_report(y_test, rf.predict(X_test)))
+print('SVM Accuracy: {:.3f}'.format(accuracy_score(y_test, svc.predict(X_test))))
+print('Classification Report', classification_report(y_test, svc.predict(X_test)))
 
 print('X TEST', type(X_test), X_test)
 
-y_pred = rf.predict(X_test)
+y_pred = svc.predict(X_test)
 print(y_pred)
 forest_cm = confusion_matrix(y_pred, y_test)
 print('Confusion Matrix: ', forest_cm)
