@@ -3,6 +3,9 @@
 ### INTRODUCTION
 The purpose of this application is to predict wether a given employee will leave the office or not considering some parameters.
 
+### METHODOLOGY
+![Methodology](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/methodology.jpg)
+
 ### USING THE APPLICATION
 - The user fills a form displayed on the screen.
 - The user clicks the "Submit" button.
