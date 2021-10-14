@@ -27,7 +27,7 @@ A CSV file having the following columns:
 - Create dummy variables for categorical variables ("Department" and "Salary")
 
 ### FEATURE SELECTION
-Selecting 10 most important features using Recursive Feature Elimination (RFE) and Logistic Regression Model. The selected features are:
+Selecting the most important features using Recursive Feature Elimination (RFE) and Logistic Regression Model. The selected features are:
 1. Satisfaction Level
 2. Last Evaluation
 3. Time Spent in the Company
@@ -36,13 +36,14 @@ Selecting 10 most important features using Recursive Feature Elimination (RFE) a
 6. Department (Labelled as "Sales" in the dataset)
 7. Salary
 
-### Model Building
-Random Forest Classifier has been used
+### Model Generation
+SVM is being used and a pickle file is generated
 
 ### ACCURACY
-97.8%
+91%
 
-### CONFISION MATRIX
+### CONFUSION MATRIX
+
 ### CLASSIFICATION REPORT
 
 ### RUNNING THE APPLICATION LOCALLY
@@ -59,4 +60,9 @@ python app.py
 cd frontend/
 npm install
 npm start
+```
+### GENERATING A NEW SAVED MODEL
+- Go to the root folder and run:
+```bash
+python model_build.py
 ```
