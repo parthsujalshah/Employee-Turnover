@@ -45,6 +45,7 @@ SVM is being used and a pickle file is generated
 ### CONFUSION MATRIX
 
 ### CLASSIFICATION REPORT
+![Classification Report](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/classification_report.jpeg)
 
 ### RUNNING THE APPLICATION LOCALLY
 - Install python and node
