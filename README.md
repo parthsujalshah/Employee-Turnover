@@ -68,3 +68,21 @@ npm start
 ```bash
 python model_build.py
 ```
+
+### SAMPLE INPUTS
+- For result "Employee Leaving":
+    - Employee satisfaction: 20%
+    - Time since last evaluation: 1
+    - Time spent at company: 5
+    - Department: Marketing
+    - Salary: Low
+    - Uncheck both the checkboxes
+
+
+- For result "Employee Staying":
+    - Employee satisfaction: 80%
+    - Time since last evaluation: 4
+    - Time spent at company: 10
+    - Department: R and D
+    - Salary: High
+    - Check "promoted in the last 5 years box"

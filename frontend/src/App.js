@@ -215,8 +215,13 @@ function App() {
                 allowClear
               >
                 <Option value="RandD">R and D</Option>
+                <Option value="accounting">Accounting</Option>
                 <Option value="hr">HR</Option>
                 <Option value="management">Management</Option>
+                <Option value="marketing">Marketing</Option>
+                <Option value="product_mng">Product Management</Option>
+                <Option value="sales">Sales</Option>
+                <Option value="technical">Technical</Option>
               </Select>
             </Form.Item>
 
@@ -234,6 +239,7 @@ function App() {
                 allowClear
               >
                 <Option value="salary_high">High</Option>
+                <Option value="salary_medium">Medium</Option>
                 <Option value="salary_low">Low</Option>
               </Select>
             </Form.Item>
