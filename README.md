@@ -43,6 +43,7 @@ SVM is being used and a pickle file is generated
 91%
 
 ### CONFUSION MATRIX
+![Confusion Matrix](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/confusion_matrix.jpeg)
 
 ### CLASSIFICATION REPORT
 ![Classification Report](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/classification_report.jpeg)
