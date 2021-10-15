@@ -1,5 +1,3 @@
 env/
 frontend/node_modules
 frontend/build
-*.ipynb
-.ipynb_checkpoints
