@@ -10,6 +10,7 @@ The purpose of this application is to predict wether a given employee will leave
 - The user fills a form displayed on the screen.
 - The user clicks the "Submit" button.
 - The result wether the employee will stay or leave is displayed acording to the prediction.
+**Note: Due to the free deployment, the first request (after clicking the submit button) may take time to respond.**
 
 ### DATASET
 A CSV file having the following columns:
