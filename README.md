@@ -15,7 +15,7 @@
 ### INTRODUCTION
 The purpose of this application is to predict wether a given employee will leave the office or not considering some parameters.
 
-### METHODOLOGY
+### FLOW CHART OF METHODOLOGY
 ![Methodology](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/methodology.jpg)
 
 ### USING THE APPLICATION
