@@ -24,7 +24,7 @@ A CSV file having the following columns:
 - Department (Labelled as "Sales" in the dataset)
 - Salary
 
-### Preprocessing
+### PREPROCESSING
 - Rename the column "Sales" to "Department"
 - Combine "technical", "support", "IT" into "technical" department
 - Create dummy variables for categorical variables ("Department" and "Salary")
