@@ -3,7 +3,14 @@
 
 ### Live Link
 [Live Link](https://employee-turnover-predictor.netlify.app/)
-![Methodology](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_110.png)
+
+### INPUT OUTUT SCREENSHOTS
+![sc1](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_110.png)
+![sc2](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_111.png)
+![sc3](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_113.png)
+![sc4](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_114.png)
+![sc5](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_115.png)
+![sc6](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_116.png)
 
 ### INTRODUCTION
 The purpose of this application is to predict wether a given employee will leave the office or not considering some parameters.
