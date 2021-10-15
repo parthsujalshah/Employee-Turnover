@@ -7,7 +7,7 @@
 ### INPUT OUTUT SCREENSHOTS
 ![sc1](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_110.png)
 ![sc2](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_111.png)
-![sc3](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_113.png)
+![sc2](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_112.png)
 ![sc4](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_114.png)
 ![sc5](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_115.png)
 ![sc6](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/Screenshot_116.png)
