@@ -39,11 +39,15 @@ Selecting the most important features using Recursive Feature Elimination (RFE) 
 6. Department (Labelled as "Sales" in the dataset)
 7. Salary
 
+### NOVELTY: HYPERPARAMETER TUNING
+GridSearchCV is used to tune the Hyperparameters. The best parameters and the best estimator are:
+![Best parameters & estimators](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/best_p_e.jpeg)
+
 ### Model Generation
 SVM is being used and a pickle file is generated
 
 ### ACCURACY
-91%
+![Accuracy](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/accuracy.jpeg)
 
 ### CONFUSION MATRIX
 ![Confusion Matrix](https://github.com/parthsujalshah/Employee-Turnover/blob/main/images/confusion_matrix.jpeg)
