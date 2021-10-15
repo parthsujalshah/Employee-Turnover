@@ -1,5 +1,8 @@
 # EMPLOYEE TURNOVER PREDICTOR
 
+
+[Live Link](https://employee-turnover-predictor.netlify.app/)
+
 ### INTRODUCTION
 The purpose of this application is to predict wether a given employee will leave the office or not considering some parameters.
 
@@ -72,11 +75,8 @@ cd frontend/
 npm install
 npm start
 ```
-### GENERATING A NEW SAVED MODEL
-- Go to the root folder and run:
-```bash
-python model_build.py
-```
+### SAVING A NEW MODEL
+- Open the model_build.ipynb notebook.
 
 ### SAMPLE INPUTS
 - For result "Employee Leaving":
